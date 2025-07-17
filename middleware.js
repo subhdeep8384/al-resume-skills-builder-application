@@ -1,7 +1,6 @@
 // middleware.ts or src/middleware.ts
 
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
-import { err } from 'inngest/types';
 import { NextResponse } from 'next/server';
 
 const isProtectedRoute = createRouteMatcher([

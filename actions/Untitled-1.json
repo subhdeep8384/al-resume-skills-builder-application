@@ -1,0 +1,86 @@
+{
+    "salaryRanges": [
+        {
+            "role": "Software Engineer",
+            "min": 90000,
+            "max": 160000,
+            "median": 125000,
+            "location": "US National"
+        },
+        {
+            "role": "Senior Software Engineer",
+            "min": 130000,
+            "max": 220000,
+            "median": 170000,
+            "location": "US National"
+        },
+        {
+            "role": "Staff Engineer",
+            "min": 180000,
+            "max": 350000,
+            "median": 250000,
+            "location": "US Tier 1 Cities"
+        },
+        {
+            "role": "Frontend Developer",
+            "min": 85000,
+            "max": 155000,
+            "median": 120000,
+            "location": "US National"
+        },
+        {
+            "role": "Backend Developer",
+            "min": 95000,
+            "max": 165000,
+            "median": 130000,
+            "location": "US National"
+        },
+        {
+            "role": "DevOps Engineer",
+            "min": 100000,
+            "max": 180000,
+            "median": 145000,
+            "location": "US National"
+        }
+    ],
+    "growthRate": 25,
+    "demandLevel": "high",
+    "topSkills": [
+        "Python",
+        "JavaScript/TypeScript",
+        "Cloud Platforms (AWS, Azure, GCP)",
+        "Containerization (Docker, Kubernetes)",
+        "SQL/NoSQL Databases",
+        "DevOps Practices",
+        "Data Structures & Algorithms"
+    ],
+    "marketOutlook": "positive",
+    "keyTrends": [
+        "Generative AI and AI-assisted Development",
+        "Cloud-Native Architectures (Serverless, Microservices)",
+        "Emphasis on Cybersecurity and Data Privacy",
+        "Increased Adoption of DevOps/SRE Practices",
+        "Rise of Low-Code/No-Code Platforms for specific use cases",
+        "Focus on Green Software Engineering"
+    ],
+    "recommendedSkills": [
+        "Proficiency in AI/ML tools and frameworks",
+        "Expertise in Cloud-Native Development",
+        "Strong understanding of Cybersecurity principles and secure coding practices"
+    ]
+}
+
+
+{
+    "id": "cmd72m1770000u5cklxh8qtfd",
+    "industry": "transportation-autonomous-vehicles",
+    "salaryRanges": [],
+    "growthRate": 0,
+    "demandLevel": "medium",
+    "topSkills": [],
+    "marketOutlook": "neutral",
+    "keyTrends": [],
+    "recommendedSkills": [],
+    "lastUpdated": "2025-07-17T07:30:30.930Z",
+    "nextUpdate": "2025-07-24T07:30:30.928Z"
+}

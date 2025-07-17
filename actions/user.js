@@ -4,7 +4,6 @@ import { auth } from "@clerk/nextjs/server"
 import {DemandLevel , MarketOutlook} from "@prisma/client"
 
 export async function updateUser(data){
-    console.log(DemandLevel , MarketOutlook)
     const {userId} = await auth() ;
     if(!userId) throw new Error("Unauthorised")
 
@@ -60,7 +59,6 @@ export async function updateUser(data){
         return {success : true , ...result} ;
         // find if the industry exits else xretae one and update user 
     }catch(err){
-        console.error("Error updateing user and industries: " , err) ;
         throw new Error(err)
     }
 }
@@ -69,21 +67,15 @@ export async function updateUser(data){
 
 export async function getUserOnBoardingStatus(){
     const { userId } = await auth() ;
-    console.log( "USERID IS SSSSSSSSSS" , userId)
+
     if(!userId ) throw new Error("Unauthorized ") ;
     
-    const users = await db.user.findMany();
-
-    console.log("usersssss" , users)
-
-
     const user = await db.user.findUnique({
         where : {
             clerkUserId : userId ,
         }
     })
-    console.log("USER ISSSSSSSSSSSSSSSSSS", user)
-    if(!userId) throw new Error("User not found") ;
+    if(!user) throw new Error("User not found") ;
     try{
         const user = await db.user.findUnique({
             where : {
@@ -97,7 +89,7 @@ export async function getUserOnBoardingStatus(){
             isOnboarded : !!user?.industry ,
         }
     }catch(err){
-        console.error("Error checking onboarding status " , err) ;
+
         throw new Error("Failed to check onboarding status") ;
     }
 }
