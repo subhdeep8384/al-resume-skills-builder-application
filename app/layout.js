@@ -7,8 +7,9 @@ import Header  from "@/components/header.jsx"
 import { ClerkProvider } from "@clerk/nextjs";
 import { neobrutalism ,dark } from '@clerk/themes';
 import {useTheme} from "next-themes"
+import { Toaster } from "sonner";
 
-
+import {toaster } from "@/components/ui/sonner"
 
 
 const geistSans = Geist({
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
             enableSystem
           >
            <Header></Header>
+           <Toaster richColors/>
             <main className="min-h-screen">{children}</main>
              <footer className="bg-muted/50 py-12 ">
               <div className="container mx-auto px-4 text-center text-gray-300">

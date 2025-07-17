@@ -1,5 +1,5 @@
 generator client {
-  provider = "prisma-client-js"
+  provider = "prisma-client-js" 
 }
 
 datasource db {
@@ -98,13 +98,13 @@ model IndustryInsight {
   @@index([industry])
 }
 enum DemandLevel {
-  HIGH 
-  MEDIUM 
-  LOW
+  high 
+  medium
+  low
 }
 
 enum MarketOutlook {
-  POSITIVE 
-  NEGATIVE 
-  NEUTRAL
+  positive
+  negative 
+  neutral
 }
