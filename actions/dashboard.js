@@ -52,10 +52,6 @@ export async function getIndustryInsights() {
 
   if (!user) throw new Error("user not found");
   
-  // if(user.industryInsight){
-  //   console.log("HELLLLO")
-  //   return user.industryInsight
-  // }
 
   const normalizedIndustry = user.industry.toLowerCase().trim();
   try {

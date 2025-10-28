@@ -12,12 +12,9 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from './ui/button';
-import { ChevronDown, File, FileText, GraduationCap, LayoutDashboard, PenBox, StarIcon } from 'lucide-react';
-import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from './ui/dropdown-menu';
+import { ChevronDown, FileText, GraduationCap, LayoutDashboard, PenBox, StarIcon } from 'lucide-react';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from './ui/dropdown-menu';
 import { checkUser } from '@/lib/checkUser';
-
-// import '@clerk/themes/dist/clerk.css';
-
 
 
 
@@ -38,7 +35,7 @@ const Header = async  () => {
 
 
           </Link>
-          <span className='text-2xl font-semibold'> GanduAI </span>
+          <span className='text-2xl font-semibold hidden '> uAI </span>
         </div>
         <div className='flex items-center space-x-2 md:space-x-5'>
 
@@ -106,7 +103,6 @@ const Header = async  () => {
           </SignedIn>
 
           <SignedOut>
-            <span className='text-sm flex items-center  justify-center md:text-xl lg:text-3xl'>To unlock Ai-Tools please Sign-In</span>
             <SignInButton>
               <Button>
                 <span className="px-1 py-1 rounded cursor-pointer">Sign-In</span>
