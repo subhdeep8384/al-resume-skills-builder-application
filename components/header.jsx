@@ -35,7 +35,7 @@ const Header = async  () => {
 
 
           </Link>
-          <span className='text-2xl font-semibold hidden '> uAI </span>
+          <span className='hidden lg:inline lg:text-2xl lg:font-bold'> uAI </span>
         </div>
         <div className='flex items-center space-x-2 md:space-x-5'>
 
@@ -76,7 +76,7 @@ const Header = async  () => {
 
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Link href={"/interview-prep"}>
+                  <Link href={"/interview"}>
                     <div className='flex space-x-2  items-center md:space-x-2 '>
 
                       <GraduationCap className='h-4 w-4 ' />

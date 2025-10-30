@@ -16,7 +16,6 @@ import {
 
 import faqs from "@/data/faqs";
 import { howItWorks } from "@/data/howltWorks";
-import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 
 export default function Home() {

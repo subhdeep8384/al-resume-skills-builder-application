@@ -1,5 +1,5 @@
 "use client";
-import { Progress } from "@/components/ui/progress"
+
 import { onboardingScheme } from '@/lib/schema';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';

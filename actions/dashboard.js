@@ -36,8 +36,7 @@ export async function  generateAiInsight(industry){
         });
         return response.text ;
       }
-      
-       const data   = await main();
+      const data   = await main();
        const cleanText = data.replace(/```(?:json)?\n?/g ,"").trim() ;
        return JSON.parse(cleanText) ;
 }
@@ -54,8 +53,18 @@ export async function getIndustryInsights() {
   
 
   const normalizedIndustry = user.industry.toLowerCase().trim();
+
   try {
-    const insights = await generateAiInsight(normalizedIndustry);
+    const existingInsight = await db.industryInsight.findUnique({
+      where: { industry: normalizedIndustry },
+    });
+
+    if (existingInsight.growthRate > 0) {
+      return existingInsight;
+    }
+
+
+    const insights = await generateAiInsight(normalizedIndustry)  ;
 
     const industryInsight = await db.industryInsight.upsert({
       where: { industry: normalizedIndustry }, 
@@ -70,9 +79,7 @@ export async function getIndustryInsights() {
         nextUpdate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // optional
       }
     });
-    
 
-   
     return industryInsight;
   } catch (err) {
    

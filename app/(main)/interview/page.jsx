@@ -1,9 +1,15 @@
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 import React from 'react'
 
 const Page = () => {
   return (
     <div>
-      This is mock interview page
+      <div>
+        <Button >
+        <Link href='/interview/mock'>Go to quiz</Link>
+        </Button>
+      </div>
     </div>
   )
 }
