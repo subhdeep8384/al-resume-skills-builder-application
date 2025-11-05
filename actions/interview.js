@@ -135,3 +135,25 @@ export async function saveQuizResult(question , answers , score ){
           }
         }
 }
+
+export async function getAssessment(){
+    const { userId  } = await auth() ;
+    if(!userId) throw new Error("Unauthorised")
+        const user = await db.user.findUnique({
+        where : {
+        clerkUserId : userId ,
+        }
+    })
+    if(!user) throw new Error("ma chud gye")
+        try{
+            const assessment = await db.assessment.findMany({
+                where : {
+                    userId : user.id ,
+                } ,
+                orderBy :{
+                    createdAt : "desc" ,
+                }
+            })
+            return assessment ;
+        }catch(e){console.log(e)}
+}
