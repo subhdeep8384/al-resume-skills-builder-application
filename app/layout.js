@@ -11,7 +11,6 @@ import { Toaster } from "sonner";
 
 import {toaster } from "@/components/ui/sonner"
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

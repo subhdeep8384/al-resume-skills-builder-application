@@ -9,12 +9,16 @@ import QuizList from './_components/QuizList'
 const Page =  async  () => {
 
   const assessment = await getAssessment()
+  console.log(assessment)
   return (
     <div>
       <div>
       <h1 className='text-6xl font-bold gradient-text mb-5'>Interview Perparation</h1>
 
       <div>
+        <Button>
+          <Link href="/interview/mock">Mock Interview Questions</Link>
+        </Button>
         <StatsCard assessment={assessment} />
         <PerformanceChart assessment={assessment} />
         <QuizList assessment={assessment} />

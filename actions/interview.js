@@ -137,6 +137,7 @@ export async function saveQuizResult(question , answers , score ){
 }
 
 export async function getAssessment(){
+    
     const { userId  } = await auth() ;
     if(!userId) throw new Error("Unauthorised")
         const user = await db.user.findUnique({
@@ -155,5 +156,6 @@ export async function getAssessment(){
                 }
             })
             return assessment ;
-        }catch(e){console.log(e)}
+    }catch(e){console.log(e)}
 }
+

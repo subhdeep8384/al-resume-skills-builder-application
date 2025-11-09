@@ -27,7 +27,7 @@ export default function Home() {
     backgroundColor: "background.paper",
   };
 
-  const { theme } = useTheme();
+
 
   return (
     <div>
