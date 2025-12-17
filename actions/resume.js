@@ -105,6 +105,7 @@ export async function improveWithAi({
         }
         const data = await main();
         const cleanText = data.replace(/```(?:json)?\n?/g, "").trim();
+        
         return cleanText;
     }catch(e){
         throw new Error("Failed to improve resume");
