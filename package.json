@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "prisma:generate": "cd ./prisma && npx prisma generate",
+    "postinstall": "cd ./prisma && npx prisma generate",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
